@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="210.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+   <children>
+      <TextArea fx:id="incomingArea" editable="false" layoutX="30.0" layoutY="35.0" prefHeight="100.0" prefWidth="252.0" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="318.0" AnchorPane.topAnchor="35.0" />
+      <Label layoutX="30.0" layoutY="14.0" text="Incoming data:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="14.0" />
+      <Label layoutX="30.0" layoutY="145.0" text="Write here:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="145.0" />
+      <TextField fx:id="writeArea" layoutX="30.0" layoutY="162.0" onKeyReleased="#userTypeAction" prefHeight="25.0" prefWidth="407.0" />
+      <CheckBox fx:id="autoSubmit" layoutX="466.0" layoutY="137.0" mnemonicParsing="false" text="Auto submit" AnchorPane.leftAnchor="466.0" AnchorPane.topAnchor="137.0" />
+      <Button fx:id="submitButton" layoutX="449.0" layoutY="162.0" mnemonicParsing="false" onAction="#submit" prefHeight="25.0" prefWidth="120.0" text="Submit" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="162.0" />
+      <Label layoutX="450.0" layoutY="14.0" text="Connection:" />
+      <ChoiceBox fx:id="portList" layoutX="450.0" layoutY="35.0" prefHeight="25.0" prefWidth="120.0" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="35.0" />
+      <Button fx:id="openBtn" layoutX="450.0" layoutY="110.0" mnemonicParsing="false" onAction="#openConnection" prefHeight="25.0" prefWidth="59.0" text=" Open" AnchorPane.bottomAnchor="81.0" />
+      <Button fx:id="closeBtn" layoutX="511.0" layoutY="110.0" mnemonicParsing="false" onAction="#closeConnection" prefHeight="25.0" prefWidth="59.0" text="Close" AnchorPane.bottomAnchor="81.0" />
+      <Button layoutX="450.0" layoutY="73.0" mnemonicParsing="false" onAction="#refreshPortList" prefHeight="25.0" prefWidth="120.0" text="Refresh" AnchorPane.bottomAnchor="115.0" />
+      <Label layoutX="300.0" layoutY="14.0" text="Log:" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="14.0" />
+      <TextArea fx:id="logArea" editable="false" layoutX="300.0" layoutY="35.0" prefHeight="100.0" prefWidth="136.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="35.0" />
+   </children>
+</AnchorPane>
