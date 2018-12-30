@@ -2,14 +2,13 @@ package serialPort;
 
 import com.victorlaerte.asynctask.AsyncTask;
 import controllers.MainController;
-import jssc.SerialPort;
 import jssc.SerialPortException;
 
-public class PortMonitor extends AsyncTask {
+public class InputStreamMonitor extends AsyncTask {
 
-    MainController mainController;
+    private MainController mainController;
 
-    public PortMonitor(MainController mainController) {
+    public InputStreamMonitor(MainController mainController) {
         this.mainController = mainController;
     }
 
@@ -31,9 +30,7 @@ public class PortMonitor extends AsyncTask {
                     e.printStackTrace();
                 }
             }
-
         }
-
         return null;
     }
 

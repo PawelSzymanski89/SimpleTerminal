@@ -3,8 +3,6 @@ package serialPort;
 import jssc.SerialPort;
 import jssc.SerialPortException;
 
-import javax.validation.constraints.Null;
-
 public class Communication {
 
     private SerialPort serialPort;
@@ -30,7 +28,7 @@ public class Communication {
     }
 
     public boolean stop() {
-        if (serialPort != null) return false;
+        if (serialPort == null) return false;
         if (serialPort.isOpened()) {
             try {
                 return serialPort.closePort();
